@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Барак"
         mc:Ignorable="d"
-        Title="Барак" Height="110.941" Width="328.809" WindowStartupLocation="CenterScreen" Closing="Window_Closing" ResizeMode="NoResize">
+        Title="Барак" Height="110.941" Width="328.809" WindowStartupLocation="CenterScreen" Closing="Window_Closing" ResizeMode="NoResize" Icon="iconmonstr-password-11-32.png">
     <Grid>
         <StackPanel>
             <Button x:Name="button" Content="Вибрати файл..." Margin="0" Click="Button_Click" VerticalAlignment="Top" Height="40"/>

@@ -27,6 +27,7 @@ namespace Барак
     /// </summary>
     public partial class MainWindow : System.Windows.Window
     {
+        string path = @"C:\Файли\Crack";
         Microsoft.Office.Interop.Word.Application wordApp = null;
         Microsoft.Office.Interop.Excel.Application excelApp = null;
         OpenFileDialog fileDialog;
@@ -90,7 +91,7 @@ namespace Барак
             }
             if (fileDialog.FileName.EndsWith(".zip"))
             {
-                Process.Start("explorer.exe", @"C:\Users\kukha\source\repos\Барак\bin\Debug\file to crack");
+                Process.Start("explorer.exe", path);
                 return;
             }
             MessageBox.Show("Unknown error");
@@ -186,8 +187,8 @@ namespace Барак
             button.IsEnabled = false;
 
             fileDialog = new OpenFileDialog();
-            fileDialog.Filter = "Файли для підбору паролю (*.docx, *.xlsx, *.zip)|*.docx;*.xlsx;*.zip";
-            fileDialog.InitialDirectory = @"C:\Users\kukha\source\repos\Барак\bin\Debug";
+            fileDialog.Filter = "Файли для підбору паролю |*.docx;*.xlsx;*.zip"; //(*.docx, *.xlsx, *.zip)
+            fileDialog.InitialDirectory = path;
             fileDialog.ShowDialog();
 
             if (fileDialog.FileName.EndsWith(".docx"))
